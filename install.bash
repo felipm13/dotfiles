@@ -42,3 +42,5 @@ fi
 
 git config --global user.email "silva.luisfelipe13@gmail.com"
 git config --global user.name "Luis Felipe"
+
+sudo apt upgrade -y
