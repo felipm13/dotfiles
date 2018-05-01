@@ -1,4 +1,3 @@
-
 call plug#begin('~/.config/nvim/plugged')
 " small functions
 Plug 'tpope/vim-abolish'     "Better substitute :%S//
@@ -7,7 +6,8 @@ Plug 'tpope/vim-surround'    "Change surrounds <l>cs{(
 " Visuals
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'iCyMind/NeoSolarized'
+"Plug 'iCyMind/NeoSolarized'
+Plug 'altercation/vim-colors-solarized'
 " Navigation
 "Plug 'majutsushi/tagbar'    "BUGBUGBUGBUG
 Plug 'scrooloose/nerdtree'
@@ -37,11 +37,12 @@ Plug 'vivien/vim-linux-coding-style'
 call plug#end()
 
 " appearance
+let g:solarized_termcolors=256
 set background=dark
-colorscheme NeoSolarized
+colorscheme solarized
 
-set cursorcolumn
-set cursorline
+"set cursorcolumn
+"set cursorline
 set number
 set nowrap
 
@@ -135,7 +136,7 @@ let g:clang_format#detect_style_file = 1
 " this will be used as a fallback
 let g:clang_format#enable_fallback_style = 1
 let g:clang_format#code_style = "Google"
-let g:clang_format#style_options = { "Standard" : "C++11", "ColumnLimit" : 0 }
+let g:clang_format#style_options = { "Standard" : "C++11", "ColumnLimit" : 0, "IndentWidth" : 4 }
 "autocmd FileType c,cpp let g:clang_format#auto_format = 1
 
 nmap <leader>kf :LinuxCodingStyle<CR>
