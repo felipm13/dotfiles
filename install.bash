@@ -4,7 +4,7 @@ cd ~
 
 sudo apt update
 
-sudo apt install terminator vim clang-format-5.0 build-essential cmake curl zsh
+sudo apt install terminator vim clang-format-5.0 build-essential cmake curl zsh synergy
 sudo apt install git git-core git-gui gitk
 sudo apt install python-dev python-pip python3-dev python3-pip
 curk -sSL https://get.docker.com | sh
