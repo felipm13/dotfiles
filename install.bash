@@ -4,16 +4,18 @@ cd ~
 
 sudo apt update
 
-sudo apt install terminator vim clang-format-5.0 build-essential cmake curl zsh synergy
-sudo apt install git git-core git-gui gitk
-sudo apt install python-dev python-pip python3-dev python3-pip
+sudo apt install terminator vim clang-format-5.0 build-essential cmake curl zsh synergy -y
+sudo apt install git git-core git-gui gitk -y
+sudo apt install python-dev python-pip python3-dev python3-pi -y
+sudo apt install python3-numpy python3-matplotlib python-numpy python-matplotlib -y
 curk -sSL https://get.docker.com | sh
 
 # beyond stuffs
-sudo apt install libboost-dev mosquitto-dev mosquitto-clients libmosquitto-dev libcurl4-gnutls-dev libjson-c-dev libboost-system-dev libncurses5-dev zlib1g-dev gawk libssl-dev libssl1.0-dev subversion
+sudo apt install libboost-dev mosquitto-dev mosquitto-clients libmosquitto-dev libcurl4-gnutls-dev libjson-c-dev \
+    libboost-system-dev libncurses5-dev zlib1g-dev gawk libssl-dev libssl1.0-dev subversion -y
 
 # Plug Vim
-sudo apt install exuberant-ctags && curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+sudo apt install exuberant-ctags -y && curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # labima stuffs
 
