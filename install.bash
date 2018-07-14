@@ -1,4 +1,17 @@
 #!/bin/bash
+##############
+# Author: Luis Felipe Moua da Silva
+
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+OS=$(lsb_release -si)
+VER=$(lsb_release -sr)
+OS_NAME=$(lsb_release -sc)
 
 cd ~
 
@@ -11,8 +24,9 @@ sudo apt install python3-numpy python3-matplotlib python-numpy python-matplotlib
 curk -sSL https://get.docker.com | sh
 
 # beyond stuffs
-sudo apt install libboost-dev mosquitto-dev mosquitto-clients libmosquitto-dev libcurl4-gnutls-dev libjson-c-dev \
-    libboost-system-dev libncurses5-dev zlib1g-dev gawk libssl-dev libssl1.0-dev subversion -y
+sudo apt install libboost-dev libmosquitto-dev mosquitto-dev mosquitto-clients libmosquitto-dev libcurl4-gnutls-dev libjson-c-dev \
+    libboost-system-dev libboost-all-dev libncurses5-dev zlib1g-dev gawk libssl-dev libssl1.0-dev subversion \
+    libjson-c-dev libcurl4-openssl-dev -y
 
 # Plug Vim
 sudo apt install exuberant-ctags -y && curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -20,27 +34,35 @@ sudo apt install exuberant-ctags -y && curl -fLo ~/.vim/autoload/plug.vim --crea
 # labima stuffs
 
 if [ ! -d ".oh-my-zsh" ]; then
-	echo "Intalling oh-my-zsh"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    echo "Intalling oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-	echo "oh-my-zsh already installed: skipping"
+    echo "oh-my-zsh already installed: skipping"
 fi
 
 if [ ! -d "beyond" ]; then
-	echo "Creating beyond"
-	mkdir beyond
+    echo "Creating beyond"
+    mkdir beyond
 else
-	echo "beyond already created: skipping"
+    echo "beyond already created: skipping"
 fi
 
 if [ ! -d "labima" ]; then
-	echo "Creating labima"
-	mkdir labima
+    echo "Creating labima"
+    mkdir labima
 else
-	echo "labima already created: skipping"
+    echo "labima already created: skipping"
 fi
 
+echo -e "${GREEN}Configin git ... ${NC}\n"
 git config --global user.email "silva.luisfelipe13@gmail.com"
 git config --global user.name "Luis Felipe"
 
 sudo apt upgrade -y
+
+echo -e "${GREEN}Cleaning the cache ... ${NC}\n"
+sudo apt-get autoclean -y
+sudo apt-get autoremove -y
+
+echo -e "${GREEN}End of installation !!!! ${NC}\n"
+
