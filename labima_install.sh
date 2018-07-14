@@ -10,9 +10,9 @@ sudo pip install --user scikit-learn
 
 sudo apt-get install python-setuptools python-dev build-essential python-numpy python-scipy python-matplotlib ipython ipython3 python-pandas python-sympy python-nose
 
-if [ ! -d "LABIMA" ]; then
+if [ ! -d "labima" ]; then
     echo "Creating LABIMA folder"
-    mkdir LABIMA
+    mkdir labima
 else
     echo "LABIMA folder already exists: skipping"
 fi
