@@ -1,48 +1,77 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
+
 " small functions
 Plug 'tpope/vim-abolish'     "Better substitute :%S//
 Plug 'tpope/vim-fugitive'    "Git wrapper :Gsplit
 Plug 'tpope/vim-surround'    "Change surrounds <l>cs{(
+
 " Visuals
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-"Plug 'iCyMind/NeoSolarized'
 Plug 'altercation/vim-colors-solarized'
+
 " Navigation
 "Plug 'majutsushi/tagbar'    "BUGBUGBUGBUG
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'moll/vim-bbye'
 Plug 'rking/ag.vim'
+
 " Auto complete
 "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+
 " ctags
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-easytags'
+
 " cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'rhysd/vim-clang-format'
+
 " python
 Plug 'hynek/vim-python-pep8-indent'
 Plug 'nvie/vim-flake8'
 "Plug 'scrooloose/syntastic'
 Plug 'davidhalter/jedi'
+
 " json
 Plug 'elzr/vim-json'
 Plug 'tpope/vim-jdaddy'
+
 " linux kernel
 Plug 'vivien/vim-linux-coding-style'
+
+" Utility
+Plug 'tpope/vim-repeat'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'ervandew/supertab'
+Plug 'wesQ3/vim-windowswap'
+Plug 'SirVer/ultisnips'
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf'
+Plug 'godlygeek/tabular'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'benmills/vimux'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'gilsondev/searchtasks.vim'
+Plug 'Shougo/neocomplete.vim'
+Plug 'tpope/vim-dispatch'
+
 call plug#end()
 
 " appearance
+set t_Co=256
+syntax enable
+let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
-"set cursorcolumn
-"set cursorline
+set cursorcolumn
+set cursorline
 set number
 set nowrap
 
@@ -55,6 +84,10 @@ set list
 set noerrorbells
 set spelllang=en
 set clipboard=unnamedplus
+
+
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
+
 
 " Indentation
 set smartindent
@@ -85,6 +118,8 @@ autocmd CompleteDone * pclose
 
 " NerdTree
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " Easytags
 let g:easytags_async = 1
@@ -147,12 +182,23 @@ nmap <C-j> :bprev<CR>
 nmap <C-l> :wincmd w<CR>
 nmap <C-h> :wincmd p<CR>
 
+" NERDTree
+nmap <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+nmap <C-m> :TagbarToggle<CR>
+
+
+
 " <C-> Plugins
 nmap <C-f> :ClangFormat<CR>
 nmap <C-t> :TagbarToggle<CR>
 nmap <C-g> :GitGutterToggle<CR>
 nmap <C-s> :SyntasticToggleMode<CR>
 nmap <C-x> :SyntaxToggle<CR>
+
+nmap <leader>q :qa <CR>
 
 " <leader>
 let mapleader = " "
@@ -185,3 +231,6 @@ noremap   <Up>     <NOP>
 noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
+
+cnoreabbrev W w
+cnoreabbrev q qa
