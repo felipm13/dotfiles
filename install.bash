@@ -63,6 +63,9 @@ sudo apt install exuberant-ctags -y && curl -fLo ~/.vim/autoload/plug.vim --crea
 echo -e "${GREEN}Configin git ... ${NC}\n"
 git config --global user.email "silva.luisfelipe13@gmail.com"
 git config --global user.name "Luis Felipe"
+git config --global alias.co "checkout"
+git config --global alias.cob "checkout -b"
+
 
 sudo apt upgrade -y
 
