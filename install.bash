@@ -21,6 +21,7 @@ sudo apt install terminator vim clang-format-5.0 build-essential cmake curl zsh 
 sudo apt install git git-core git-gui gitk -y
 sudo apt install python-dev python-pip python3-dev python3-pi -y
 sudo apt install python3-numpy python3-matplotlib python-numpy python-matplotlib -y
+sudo apt install tree minicom -y
 curl -sSL https://get.docker.com | sh
 
 # beyond stuffs
