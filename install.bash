@@ -45,6 +45,13 @@ else
     echo "labima already created: skipping"
 fi
 
+# lsa stuffs
+if [ ! -d "lsa" ]; then
+    echo "Creating lsa"
+    mkdir labima
+else
+    echo "lsa already created: skipping"
+fi
 
 
 if [ ! -d ".oh-my-zsh" ]; then
