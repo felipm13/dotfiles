@@ -6,9 +6,7 @@
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 ORANGE='\033[0;33m'
-YELLOW='\033[1;33m'
-NC='\033[0m'
-
+YELLOW='\033[1;33m' NC='\033[0m' 
 OS=$(lsb_release -si)
 VER=$(lsb_release -sr)
 OS_NAME=$(lsb_release -sc)
@@ -73,6 +71,7 @@ git config --global user.name "Luis Felipe"
 git config --global alias.co "checkout"
 git config --global alias.cob "checkout -b"
 git config --global alias.coma "commit --amend"
+git config --global alias.st "status"
 
 
 sudo apt upgrade -y
