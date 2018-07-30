@@ -72,6 +72,7 @@ git config --global user.email "silva.luisfelipe13@gmail.com"
 git config --global user.name "Luis Felipe"
 git config --global alias.co "checkout"
 git config --global alias.cob "checkout -b"
+git config --global alias.coma "commit --amend"
 
 
 sudo apt upgrade -y
