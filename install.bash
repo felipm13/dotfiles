@@ -73,6 +73,7 @@ git config --global alias.cob "checkout -b"
 git config --global alias.coma "commit --amend"
 git config --global alias.st "status"
 git config --global alias.rev "rev-parse HEAD"
+git config --global alias.revshort "rev-parse --short HEAD"
 
 
 sudo apt upgrade -y
