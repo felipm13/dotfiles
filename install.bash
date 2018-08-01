@@ -75,6 +75,8 @@ git config --global alias.st "status"
 git config --global alias.rev "rev-parse HEAD"
 git config --global alias.revshort "rev-parse --short HEAD"
 
+git config --global core.editor "vim"
+
 
 sudo apt upgrade -y
 
