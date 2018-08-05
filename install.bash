@@ -91,6 +91,7 @@ else
 fi
 
 #me
+cd $HOME/repositories
 if [ ! -d "me" ]; then
     echo -e "${GREEN}Creating me folder${NC}\n"
     mkdir me
@@ -100,6 +101,7 @@ fi
 
 
 # beyond 
+cd $HOME
 if [ ! -d "beyond" ]; then
     echo -e "${GREEN}Creating beyond folder${NC}\n"
     mkdir beyond
@@ -108,6 +110,7 @@ else
 fi
 
 # LABIMA
+cd $HOME/repositories
 if [ ! -d "labima" ]; then
     echo -e "${GREEN}Creating labima folder${NC}\n"
     mkdir labima
@@ -117,6 +120,7 @@ fi
 
 
 # lsa 
+cd $HOME/repositories
 if [ ! -d "lsa" ]; then
     echo -e "${GREEN}Creating lsa folder${NC}\n"
     mkdir lsa
@@ -125,6 +129,7 @@ else
 fi
 
 # lmf 
+cd $HOME/repositories
 if [ ! -d "lmf" ]; then
     echo "${GREEN}Creating lmf folder${NC}\n"
     mkdir lmf
