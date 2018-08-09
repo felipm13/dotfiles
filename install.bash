@@ -82,6 +82,9 @@ git config --global core.editor "vim"
 echo -e "${GREEN}Installing docker${NC}\n"
 curl -sSL https://get.docker.com | sh
 
+# heroku
+sudo snap install heroku --classic
+
 cd $HOME
 if [ ! -d "repositories" ]; then
     echo -e "${GREEN}Creating repositories${NC}\n"
