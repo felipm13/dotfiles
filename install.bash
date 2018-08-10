@@ -59,6 +59,7 @@ sudo apt install \
     libncurses5-dev \
     subversion \
     #??
+    libssl1.0-dev \
     #libboost-all-dev libssl-dev libssl1.0-dev libcurl4-openssl-dev \
     #u
     sshpass \
