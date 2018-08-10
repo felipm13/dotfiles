@@ -15,7 +15,8 @@ cd ~
 
 sudo apt update
 
-sudo apt install terminator \
+sudo apt install \
+    terminator \
     vim \
     clang-format-5.0 \
     build-essential \
@@ -23,12 +24,14 @@ sudo apt install terminator \
     curl \
     zsh \
     npm \
-    synergy \
     git \
     git-core \
     git-gui \
     gitk \
-    arduino \
+    tree \
+    minicom -y
+
+sudo apt install \
     python-dev \
     python-pip \
     python3-dev \
@@ -38,18 +41,28 @@ sudo apt install terminator \
     python-numpy \
     python-matplotlib \
     quandl \
-    tree \
-    minicom \
+    arduino \
+    synergy \
     freecad -y
 
 # beyond depends
-sudo apt install libboost-dev libmosquitto-dev \
-    mosquitto-dev mosquitto-clients libmosquitto-dev \
-    libcurl4-gnutls-dev libjson-c-dev libboost-system-dev \
-    libboost-all-dev libncurses5-dev zlib1g-dev gawk libssl-dev \
-    libssl1.0-dev subversion libjson-c-dev curl libcurl4-openssl-dev \
-    sshpass jq -y
-
+sudo apt install \
+    #a
+    libboost-dev \
+    libmosquitto-dev \
+    libjson-c-dev \
+    libcurl4-gnutls-dev \
+    libboost-system-dev \
+    #g
+    gawk \
+    zlib1g-dev \
+    libncurses5-dev \
+    subversion \
+    #??
+    #libboost-all-dev libssl-dev libssl1.0-dev libcurl4-openssl-dev \
+    #u
+    sshpass \
+    jq -y
 
 if [ ! -d ".oh-my-zsh" ]; then
     echo -e "${GREEN}Intalling oh-my-zsh ... ${NC}\n"
@@ -80,7 +93,7 @@ git config --global core.editor "vim"
 
 # docker
 echo -e "${GREEN}Installing docker${NC}\n"
-curl -sSL https://get.docker.com | sh
+#curl -sSL https://get.docker.com | sh
 
 # heroku
 sudo snap install heroku --classic
