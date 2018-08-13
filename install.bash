@@ -36,14 +36,17 @@ sudo apt install \
     python-pip \
     python3-dev \
     python3-pip \
-    python3-numpy \
-    python3-matplotlib \
-    python-numpy \
-    python-matplotlib \
     quandl \
     arduino \
     synergy \
     freecad -y
+
+sudo apt install \
+    python3-numpy \
+    python3-pandas \
+    python3-matplotlib \
+    python3-pandas-datareader \
+    python3-fix-yahoo-finance -y
 
 # beyond depends
 sudo apt install \
@@ -60,6 +63,7 @@ sudo apt install \
     subversion \
     #??
     libssl1.0-dev \
+    libcurl4-openssl-dev \
     #libboost-all-dev libssl-dev libssl1.0-dev libcurl4-openssl-dev \
     #u
     sshpass \
