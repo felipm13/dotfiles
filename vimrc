@@ -10,8 +10,7 @@ Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 
-" Navigation
-"Plug 'majutsushi/tagbar'    "BUGBUGBUGBUG
+" Navigation "Plug 'majutsushi/tagbar'    "BUGBUGBUGBUG
 Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'moll/vim-bbye'
@@ -193,6 +192,7 @@ nmap <C-m> :TagbarToggle<CR>
 
 " <C-> Plugins
 nmap <C-f> :ClangFormat<CR>
+nmap <C-y> :YcmCompleter FixIt<CR>
 nmap <C-t> :TagbarToggle<CR>
 nmap <C-g> :GitGutterToggle<CR>
 nmap <C-s> :SyntasticToggleMode<CR>
