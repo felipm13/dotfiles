@@ -18,7 +18,7 @@ sudo apt update
 sudo apt install \
     terminator \
     vim \
-    clang-format-5.0 \
+    clang-format-6.0 \
     build-essential \
     cmake \
     curl \
@@ -36,7 +36,6 @@ sudo apt install \
     python-pip \
     python3-dev \
     python3-pip \
-    quandl \
     arduino \
     synergy \
     freecad -y
