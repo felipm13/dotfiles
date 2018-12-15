@@ -55,21 +55,17 @@ sudo apt install \
 # beyond depends
 sudo apt install \
     #a
-    libboost-dev \
+    libboost-all-dev \
     libmosquitto-dev \
     libjson-c-dev \
     libcurl4-gnutls-dev \
-    libboost-system-dev \
     #g
     gawk \
     zlib1g-dev \
-    libncurses5-dev \
     subversion \
-    #??
-    libssl1.0-dev \
-    libcurl4-openssl-dev \
-    #libboost-all-dev libssl-dev libssl1.0-dev libcurl4-openssl-dev \
     #u
+    mosquitto-clients \
+    mosquitto \
     sshpass \
     jq -y
 
@@ -115,7 +111,6 @@ if [ ! -d "me" ]; then
 else
     echo -e "${YELLOW}me already created: skipping${NC}\n"
 fi
-
 
 # beyond 
 cd $HOME
