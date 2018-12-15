@@ -27,6 +27,7 @@ sudo apt install \
     cmake \
     curl \
     zsh \
+    powerline \
     npm \
     git \
     git-core \
