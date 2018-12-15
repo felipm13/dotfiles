@@ -22,7 +22,7 @@ rm google-chrome-stable_current_amd64.deb
 sudo apt install \
     terminator \
     vim \
-    clang-format-6.0 \
+    clang-format-5.0 \
     build-essential \
     cmake \
     curl \
@@ -106,14 +106,6 @@ echo -e "${GREEN}Installing docker${NC}\n"
 # heroku
 sudo snap install heroku --classic
 
-cd $HOME
-if [ ! -d "repositories" ]; then
-    echo -e "${GREEN}Creating repositories${NC}\n"
-    mkdir repositories
-else
-    echo -e "${YELLOW}repositories already created: skipping${NC}\n"
-fi
-
 #me
 cd $HOME/repositories
 if [ ! -d "me" ]; then
@@ -132,35 +124,6 @@ if [ ! -d "beyond" ]; then
 else
     echo -e "${YELLOW}beyond already created: skipping${NC}\n"
 fi
-
-# LABIMA
-cd $HOME/repositories
-if [ ! -d "labima" ]; then
-    echo -e "${GREEN}Creating labima folder${NC}\n"
-    mkdir labima
-else
-    echo -e "${YELLOW}labima already created: skipping${NC}\n"
-fi
-
-
-# lsa 
-cd $HOME/repositories
-if [ ! -d "lsa" ]; then
-    echo -e "${GREEN}Creating lsa folder${NC}\n"
-    mkdir lsa
-else
-    echo -e "${YELLOW}lsa already created: skipping${NC}\n"
-fi
-
-# lmf 
-cd $HOME/repositories
-if [ ! -d "lmf" ]; then
-    echo "${GREEN}Creating lmf folder${NC}\n"
-    mkdir lmf
-else
-    echo -e "${YELLOW}lmf already created: skipping${NC}\n"
-fi
-
 
 sudo apt upgrade -y
 
